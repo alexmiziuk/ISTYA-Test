@@ -440,6 +440,10 @@
 				font-size: 12px;
 			}
 
+			.btn {
+				font-size: 1.167rem;
+			}
+
 			.hamburger-menu {
 				max-width: 100%;
 			}
@@ -499,7 +503,6 @@
 				<a href="#" class="btn btn-secondary">Watch Demo</a>
 			</div>
 		</section>
-
 
 		<section class="features-section">
 			<span class="section-divider"></span>
@@ -586,31 +589,31 @@
 	</div>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-	const hamburgerButton = document.querySelector('.hamburger-button');
-	const closeButton = document.querySelector('.btn-close-layer');
-	const body = document.body;
-	const layer = document.querySelector('.layer');
-	const navLinks = document.querySelectorAll('.hamburger-nav-links a');
+			const hamburgerButton = document.querySelector('.hamburger-button');
+			const closeButton = document.querySelector('.btn-close-layer');
+			const body = document.body;
+			const layer = document.querySelector('.layer');
+			const navLinks = document.querySelectorAll('.hamburger-nav-links a');
 
-	hamburgerButton.addEventListener('click', function () {
-		layer.classList.add('layer-active');
-		body.style.overflow = 'hidden';
-	});
+			hamburgerButton.addEventListener('click', function () {
+				layer.classList.add('layer-active');
+				body.style.overflow = 'hidden';
+			});
 
-	closeButton.addEventListener('click', function () {
-		layer.classList.remove('layer-active');
-		body.style.overflow = 'auto';
-	});
+			closeButton.addEventListener('click', function () {
+				layer.classList.remove('layer-active');
+				body.style.overflow = 'auto';
+			});
 
-	navLinks.forEach(link => {
-		link.addEventListener('click', function () {
-			navLinks.forEach(l => l.classList.remove('active'));
-			this.classList.add('active');
-			layer.classList.remove('layer-active');
-			body.style.overflow = 'auto';
+			navLinks.forEach(link => {
+				link.addEventListener('click', function () {
+					navLinks.forEach(l => l.classList.remove('active'));
+					this.classList.add('active');
+					layer.classList.remove('layer-active');
+					body.style.overflow = 'auto';
+				});
+			});
 		});
-	});
-});
 
 	</script>
 </body>
